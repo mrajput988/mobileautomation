@@ -7,14 +7,15 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class androidapp {
@@ -39,17 +40,14 @@ public class androidapp {
 		
 		Thread.sleep(5000);
 		
-		
-	 //  driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		
-		Thread.sleep(3000);
+	//	Thread.sleep(3000);
 		
 		driver.findElement(By.className("android.widget.EditText")).sendKeys("agnitytest.com");   // Domain register
 		
 		Thread.sleep(2000);
 		driver.findElement(By.id("com.agnity.aconyx.mc:id/configureBtn")).click();
 		
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		driver.findElement(By.id("com.agnity.aconyx.mc:id/user_id_value")).sendKeys("mg");     // enter username
 		Thread.sleep(2000);
 		driver.findElement(By.id("com.agnity.aconyx.mc:id/user_password_value")).sendKeys("1111");     //  enter password
@@ -116,7 +114,20 @@ public class androidapp {
 			driver.findElement(By.className("android.widget.ImageButton")).click();
 			Thread.sleep(3000);
 			ac.sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+			Thread.sleep(5000);
+			driver.findElement(By.id("com.agnity.aconyx.mc:id/action_search")).click();
+			Thread.sleep(3000);
+			driver.findElement(By.id("com.agnity.aconyx.mc:id/search_src_text")).sendKeys("Reeta");
+			Thread.sleep(3000);
+			driver.findElement(By.id("com.agnity.aconyx.mc:id/parent_view")).click();
+			Thread.sleep(4000);
+		//	driver.findElements(By.id("com.agnity.aconyx.mc:id/patient_options")).get(3).click(); // used for click on medication 
+			AndroidElement list = (AndroidElement) driver.findElement(By.id("com.agnity.aconyx.mc:id/patient_options"));
 			
+			MobileElement listitem = (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView("+"new UiSelector().text(\"Radiology\"));"));
+			
+			Thread.sleep(5000);
+			listitem.click();
 			
 		//	Thread.sleep(10000);
 			
