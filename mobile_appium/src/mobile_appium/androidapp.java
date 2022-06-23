@@ -129,6 +129,60 @@ public class androidapp {
 			Thread.sleep(5000);
 			listitem.click();
 			
+			Thread.sleep(3000);
+		//	driver.findElements(By.className("android.widget.RelativeLayout")).get(2).click();
+		//	Thread.sleep(5000);
+		//	driver.findElements(By.className("android.widget.RelativeLayout")).get(1).click();
+		//	Thread.sleep(5000);
+		//	driver.findElements(By.id("com.agnity.aconyx.mc:id/imaging_attachment_layout")).get(6).click();
+			
+		//	Thread.sleep(5000);
+		//	driver.findElement(By.id("com.agnity.aconyx.mc:id/title_left_view")).click();
+		//	Thread.sleep(2000);
+		//	driver.findElement(By.id("com.agnity.aconyx.mc:id/patient_header_left")).click();
+		//	Thread.sleep(3000);
+		//	driver.findElement(By.id("com.agnity.aconyx.mc:id/patient_header_left")).click();
+		//	Thread.sleep(3000);
+		//	driver.findElement(By.id("com.agnity.aconyx.mc:id/patient_header_left")).click();
+			
+			
+       AndroidElement list1 = (AndroidElement) driver.findElement(By.id("com.agnity.aconyx.mc:id/title_textview"));
+       MobileElement listitem1 = (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView("+"new UiSelector().text(\"XRAY\"));"));
+			
+       Thread.sleep(3000);
+       listitem1.click();
+       Thread.sleep(4000);
+       
+       AndroidElement list2 = (AndroidElement) driver.findElement(By.id("com.agnity.aconyx.mc:id/title_textview"));
+       MobileElement listitem2 = (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView("+"new UiSelector().text(\"XRAY1\"));"));
+       
+       Thread.sleep(4000);
+       listitem2.click();
+       Thread.sleep(4000);
+       AndroidElement list3 = (AndroidElement) driver.findElement(By.className("android.widget.TextView"));
+       MobileElement listitem3 = (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView("+"new UiSelector().text(\"View Attachment\"));"));
+       Thread.sleep(4000);
+       listitem3.click();
+       
+       Thread.sleep(5000);
+       driver.findElement(By.id("com.agnity.aconyx.mc:id/title_left_view")).click();
+       Thread.sleep(2000);
+		driver.findElement(By.id("com.agnity.aconyx.mc:id/patient_header_left")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("com.agnity.aconyx.mc:id/patient_header_left")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("com.agnity.aconyx.mc:id/patient_header_left")).click();
+       
+       
+       
+       
+			
+			
+			
+			
+			
+			
+			
 		//	Thread.sleep(10000);
 			
 			//driver.quit();
